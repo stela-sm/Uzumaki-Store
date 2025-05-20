@@ -19,6 +19,7 @@ O Site foi criado com propósito de servir à uma atividade avaliativa de Flexbo
 - Login
 - Cadastro
 - Carrinho de compras
+  
 Acesse pelo link: [https://stela-sm.github.io/Uzumaki-Store/index.html](https://stela-sm.github.io/Uzumaki-Store/index.html)
 
 💬 **Dúvidas ou sugestões?** Entre em contato! Dattebayo! 🌀
