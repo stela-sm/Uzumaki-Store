@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho de Compras</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="scripts/carrinho.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        let carrinhoArray = JSON.parse(localStorage.getItem("carrinhos")) || [];
+        const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+    function remove(id) {  
+    carrinhoArray = carrinhoArray.filter(item => {
+      return !(item.id_usuario === usuario.id && item.id_produto === id + 1);
+    })
+  
+    localStorage.setItem("carrinhos", JSON.stringify(carrinhoArray));
+    window.location.reload()
+  }
+  
+    </script>
+    <link rel="stylesheet" href="style/carrinho.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
+    <main>
+   <div class="container">
+    <div class="header-carrinho">
+      <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="3">
+        <path d="M9 14l-4 -4l4 -4"></path>
+        <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
+      </svg></a>
+      <p>
+      Meu Carrinho
+    </p>
+  </div>
+   </div>
+      <div class=" container content">
+        
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                
+                <th>-</th>
+              </tr>
+            </thead>
+            <tbody id="carrinho">
+              <tr><td>Seu carrinho está vazio!</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <aside>
+          <div class="box">
+            <header>Resumo da compra</header>
+            <div class="info">
+              <div><span>Sub-total</span><span id="carrinho-preco">R$ -</span></div>
+              <div><span>Frete</span><span>-</span></div>
+              <div>
+                <button>
+                  Adicionar cupom de desconto
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
+            </div>
+            <footer>
+              <span>Total</span>
+              <span id="carrinho-preco2">R$ -</span>
+            </footer>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="pagamento" value="pix">
+                <span>Pix</span>
+              </label>
+          
+              <label>
+                <input type="radio" name="pagamento" value="boleto">
+                <span>Boleto</span>
+              </label>
+          
+              <label>
+                <input type="radio" name="pagamento" value="cartao">
+                <span>Cartão de Crédito</span>
+              </label>
+            </div>
+          </div>
+          <button onclick="finalizar()">Finalizar Compra</button>
+        </aside>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+ function finalizar() {
+  if(carrinhoArray.lengh != 0 && carrinhoArray != null){ 
+  Swal.fire({
+    title: "Parabéns!",
+    text: "A confirmação de sua compra foi enviada ao seu email.",
+    icon: "success",
+    confirmButtonText: "OK"
+  }).then(() => {
+    carrinhoArray = carrinhoArray.filter(item => {
+      return (item.id_usuario != usuario.id && item.id_produto != id + 1);
+    })  
+    localStorage.setItem("carrinhos", JSON.stringify(carrinhoArray));
+    console.log(localStorage)
+    window.location.href = "index.html";
+    });  
+    
+  }else{
+
+  }}
+
+
+</script>
+  </body>
+</html>

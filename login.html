@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style/login.css" />
+    <script src="scripts/login.js"></script>
+    <link
+      rel="shortcut icon"
+      href="favicon_io/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Login - UZUMAKI</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="form-container">
+        <!-- Tela de Login -->
+        <div id="login-form">
+          <h2 class="text-center">Faça seu login!</h2>
+          <br />
+          <div class="input-div">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" width="24" height="34" stroke-width="2">
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+              <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path>
+            </svg>
+            <input
+            type="text"
+            id="email"
+            placeholder= "Seu Email..."
+            class="form-control"
+          />
+          </div>
+          <div class="input-div">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" width="24" height="34" stroke-width="2">
+              <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path>
+              <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+              <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+            </svg>
+            <input
+            type="password"
+            id="senha"
+            placeholder="Sua senha..."
+            class="form-control"
+          />
+
+          </div>
+        
+          <!-- Botão de Entrar com Redirecionamento -->
+          <button
+            type="button"
+            class="btn btn-orange"
+            id="entrar"
+            onclick="logar()"
+          >
+            Entrar
+          </button>
+
+          <!-- Som que será tocado ao clicar no botão -->
+          <audio id="click-sound" src="Voicy_Sharingan effect.mp3"></audio>
+
+          <button
+            type="button"
+            class="btn cadastre-se"
+            onclick="toggleForm()"
+          >
+            Não tem uma conta? Cadastre-se
+          </button>
+        </div>
+
+        <!-- Tela de Cadastro -->
+        <div id="register-form" style="display: none">
+          <h2 class="text-center cadastro">Faça seu cadastro</h2>
+          <div class="input-div">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" width="24" height="34" stroke-width="2">
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+              <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path>
+            </svg>
+          <input
+            type="email"
+            id="emailN"
+            placeholder="Seu e-mail..."
+            class="form-control"
+          />
+          </div>
+          <div class="input-div">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" width="24" height="34" stroke-width="2">
+              <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+            </svg>
+          <input
+            type="text"
+            id="usuario"
+            placeholder="Digite um username..."
+            class="form-control"
+          />
+          </div>
+          <div class="input-div">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" width="24" height="34" stroke-width="2">
+              <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path>
+              <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+              <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+            </svg>
+          <input
+            type="password"
+            id="senhaN"
+            placeholder="Digite uma senha..."
+            class="form-control"
+          />
+</div>
+
+          <button type="button" class="btn btn-orange" onclick="cadastrar()">
+            Cadastrar
+          </button>
+          <button
+            type="button"
+            class="btn cadastre-se"
+            onclick="toggleForm()"
+          >
+            Já tem uma conta? Faça login
+          </button>
+        </div>
+      </div>
+    </div>
+    <a class="voltar" href="index.html">Voltar</a>
+    <script>
+      function toggleForm() {
+        const loginForm = document.getElementById("login-form");
+        const registerForm = document.getElementById("register-form");
+
+        // Alternar entre login e cadastro
+        if (loginForm.style.display === "none") {
+          loginForm.style.display = "block";
+          registerForm.style.display = "none";
+        } else {
+          loginForm.style.display = "none";
+          registerForm.style.display = "block";
+        }
+      }
+
+      function entrar() {
+        const button = document.getElementById("entrar");
+        button.classList.add("tremor");
+        document.getElementById("click-sound").play();
+
+        setTimeout(function () {
+          button.classList.remove("tremor");
+          window.location.href = "index.html";
+        }, 2800);
+      }
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("fade-in");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style/sobre.css">
+    <link rel="shortcut icon" href="favicon_io/favicon-32x32.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>
+      Sobre - UZUMAKI
+    </title>
+  </head>
+  <script>
+    function logout() {
+     
+       Swal.fire({
+      title: "Até Mais!",
+      text: "Logout realizado com sucesso",
+      icon: "success",
+      confirmButtonText: "OK"
+    }).then(()=>{
+      localStorage.removeItem('usuarioLogado');
+      window.location.href = "index.html";
+    })
+;
+    }
+  </script>
+  <body>
+    <!--Esse é o menu, estrutura presente em todas as páginas com a mesma formatação e estilo-->
+    <div class="container flexbox">
+      <div class="firstText">
+        <img src="img/logo.png" alt="" class="logo" />
+        <div class="dropdown">
+          <p
+            class="dropdown-toggle"
+            id="welcomeText"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Botão dropdown
+          </p>
+          <div
+            class="dropdown-menu"
+            id="dropdown-menu"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a class="dropdown-item" href="#">Meu Perfil</a>
+            <a class="dropdown-item" onclick="logout()" href="#">LogOut</a>
+          </div>
+        </div>
+      </div>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">
+            Sobre
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">
+            Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carrinho.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M17 17h-11v-14h-2" />
+              <path d="M6 5l14 1l-1 7h-13" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--fim do menu-->
+
+
+  <!-- Esse é o banner, mesma estrutura da página "index.html", mudando apenas os textos-->
+    <div class="container banner">
+      <p>
+        <span class="nome-loja">
+          Bem-vindo à
+          <br>
+          uzumaki!
+        </span>
+        O paraíso dos verdadeiros fãs de Naruto!
+        <br>
+      </p>
+    </div>
+
+    <!--Esse é o primeiro bloco de texto/imagem, apenas od dois organizados lado a lado usando o flex-box e o flex-direction:row;-->
+    <div class="container first">
+      <p>
+        Aqui, acreditamos que a jornada de um shinobi nunca termina e a sua coleção
+        também não! Somos apaixonados pelo mundo ninja criado por Masashi Kishimoto
+        e nos dedicamos a trazer as melhores figuras de ação dos seus personagens
+        favoritos, desde os heróis mais lendários como Naruto, Sasuke e Kakashi,
+        até os vilões icônicos como Itachi, Madara e Pain.
+      </p>
+      <img src="img/quebrado.png" alt="">
+    </div>
+
+
+
+    <!--Esse é o segundo bloco de texto com os ícones, o primeiro parágrafo é apenas um texto centralizado e em negrito-->
+    <div class="container textabout">
+      <p2>
+        <strong>
+          Nosso compromisso é oferecer produtos 100% originais, com detalhes impressionantes
+          e qualidade excepcional. Trabalhamos com as melhores marcas do mercado
+          para garantir que cada peça seja digna de um verdadeiro colecionador.
+      </p2>
+    </div>
+
+    <!--Esses são os 3 ícones, apenas organizados em divs junto com os textos e colocados em flexbox com o justify-content: space-evenly;-->
+    <div class="container components">
+      <div class="content1">
+        <div class="icondiv">
+          <!--Esse svg é o ícone-->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+          height="24" stroke-width="2" class="icon">
+            <path d="M15 17h-11a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6a2 2 0 1 1 4 0a7 7 0 0 1 4 6v1.5">
+            </path>
+            <path d="M9 17v1a3 3 0 0 0 6 0v-1">
+            </path>
+            <path d="M19 16v3">
+            </path>
+            <path d="M19 22v.01">
+            </path>
+          </svg>
+          <br>
+          Lançamentos e edições exclusivas
+        </div>
+      </div>
+      <div class="content1">
+        <div class="icondiv">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          width="24" height="24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+          stroke="currentColor" class="icon">
+            <path d="M17.286 21.09q -1.69 .001 -5.288 -2.615q -3.596 2.617 -5.288 2.616q -2.726 0 -.495 -6.8q -9.389 -6.775 2.135 -6.775h.076q 1.785 -5.516 3.574 -5.516q 1.785 0 3.574 5.516h.076q 11.525 0 2.133 6.774q 2.23 6.802 -.497 6.8">
+            </path>
+          </svg>
+          <br>
+          Figuras detalhadas e autênticas
+        </div>
+      </div>
+      <div class="content1">
+        <div class="icondiv">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+          height="24" stroke-width="2" class="icon">
+            <path d="M21 12a9 9 0 1 0 -8.012 8.946">
+            </path>
+            <path d="M9 10h.01">
+            </path>
+            <path d="M15 10h.01">
+            </path>
+            <path d="M9.5 15a3.59 3.59 0 0 0 2.774 .99">
+            </path>
+            <path d="M18.994 21.5l2.518 -2.58a1.74 1.74 0 0 0 .004 -2.413a1.627 1.627 0 0 0 -2.346 -.005l-.168 .172l-.168 -.172a1.627 1.627 0 0 0 -2.346 -.004a1.74 1.74 0 0 0 -.004 2.412l2.51 2.59z">
+            </path>
+          </svg>
+          <br>
+          Atendimento especializado para colecionadores
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--Esse é o último bloco de texto/imagem, também consiste num texto ao lado de uma imagem organizados com flexbox e flex-direction:row;-->
+    <div class="container last-section">
+      <img src="img/rasgo.jpg" class="last-section-img" alt="">
+      <p>
+        Seja você um aspirante a Hokage ou um membro da Akatsuki, temos a figura
+        perfeita para completar sua coleção. Junte-se à nossa vila e leve um pedaço
+        do mundo ninja para casa! 🍃💨
+        <br>
+        Dattebayo!
+      </p>
+    </div>
+    </div>
+    </div>
+
+
+
+
+     <!--Esse é o footer, simples utilizando flex-box e o container do boostrap-->
+    <div class="container footer">
+      <p>
+        Siga nossas redes sociais!
+      </p>
+      <div class="linha">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+        height="24" stroke-width="2">
+          <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+        height="24" stroke-width="2">
+          <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z">
+          </path>
+          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0">
+          </path>
+          <path d="M16.5 7.5l0 .01">
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+        height="24" stroke-width="2">
+          <path d="M4 4l11.733 16h4.267l-11.733 -16z">
+          </path>
+          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772">
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+        height="24" stroke-width="2">
+          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9">
+          </path>
+          <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1">
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24"
+        height="24" stroke-width="2">
+          <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+          </path>
+          <path d="M3 7l9 6l9 -6">
+          </path>
+        </svg>
+      </div>
+      <p class="copyright">
+        © 2025 Uzumaki Store
+      </p>
+    </div>
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Carrinho
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">
+                &times;
+              </span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Seu carrinho está vazio.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous">
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded",
+      function() {
+        document.body.classList.add('fade-in');
+      });
+
+     
+    </script>
+    <script src="scripts/sobre.js"></script>
+  </body>
+
+</html>

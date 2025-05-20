@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+  font-family: Poppins;
+  background-color: rgb(
+    255,
+    103,
+    57
+  ); /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    to right,
+    rgb(234, 169, 85),
+    rgb(233, 143, 16)
+  );
+  display: flex;
+  flex-direction: column;
+  height: 100vh !important;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 22px; /* Ajustei o tamanho da fonte */
+  margin-bottom: 10px; /* Adicionei margem para maior espaçamento */
+}
+
+.test2 {
+  padding-right: 275px;
+}
+.voltar {
+  color: #fffefd;
+  margin-top: 15px;
+  border: 1px white solid;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+.voltar:hover {
+  transform: scale(0.8);
+  transition: 0.2s;
+  color: white;
+  text-decoration: none;
+}
+.container {
+  width: 500px;
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(4px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 30px;
+  color: white;
+  padding-left: 20px;
+  padding: 40px; /* Ajustei o padding para melhorar o espaçamento */
+}
+.text-center{
+  font-size: 1.6em;
+  font-weight: 500;
+  color: rgb(33, 31, 25);
+}
+.superflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+.input-div{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;  
+  padding-left: 10px;
+  background-color: #fffefd;
+  margin: 10px;
+  align-items: center;
+}
+.cadastro{
+  margin-bottom: 10%;
+}
+
+.figura {
+  width: 500px; /* Aumentando a largura */
+  height: 400px; /* Definindo uma altura fixa */
+  max-width: 100%; /* Evita que ultrapasse o container */
+  object-fit: cover; /* Mantém a proporção e cobre o espaço */
+  border-radius: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.cadastre-se{
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #080807;
+  font-size: 0.8em;
+}
+.cadastre-se:hover{
+  color: white;
+}
+
+.form-container h1 {
+  font-size: 18px; /* tamanho da fonte */
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  height: 100%; /* Ajustei a altura para não ficar muito grande */
+  border: none;
+  font-size: 0.8em;
+  padding: 15px; /* Aumentei um pouco o padding para um campo mais confortável */
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adicionando uma transição suave */
+}
+
+.btn-orange:hover {
+  background-color:transparent !important; /* Usando !important para garantir que o hover funcione */
+  color: #f99a1d;
+  border: 1px orange solid;
+}
+.btn-orange {
+  background-color: #f99a1d;
+  color: #fffefd;
+  font-weight: 600;
+  border-radius: 15px;
+}
+/* Animação de tremor */
+@keyframes tremor {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+.tremor {
+  animation: tremor 0.5s ease-in-out;
+  animation-iteration-count: 1;
+}
