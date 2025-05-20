@@ -11,7 +11,9 @@ O Site foi criado com propósito de servir à uma atividade avaliativa de Flexbo
 
 ## 🤝 Time
 [Stela Montenegro](https://github.com/stela-sm)
+
 [Íris Oliveira](https://github.com/iris-oli)  
+
 [Laura Cristini](https://github.com/Laura677) 
 
 💬 **Dúvidas ou sugestões?** Entre em contato! Dattebayo! 🌀
