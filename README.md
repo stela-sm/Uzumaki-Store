@@ -1,5 +1,4 @@
 # Projeto: Uzumaki Store
-![image](https://github.com/user-attachments/assets/7ceb563c-eb1f-4829-9036-44ccbce010ed)
 
 
 ## 📌 Sobre o Projeto
